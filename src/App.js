@@ -5,6 +5,7 @@ import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Services from "./Pages/Services";
 import Contact from "./Pages/Contact";
+import Footer from "./Components/Footer";
 import { Route, Switch, useLocation } from "react-router-dom";
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Contact />
         </Route>
       </Switch>
+      <Footer />
     </div>
   );
 }
