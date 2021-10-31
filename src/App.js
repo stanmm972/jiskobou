@@ -5,6 +5,7 @@ import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Services from "./Pages/Services";
 import Contact from "./Pages/Contact";
+import Emploi from "./Pages/Emploi";
 import Footer from "./Components/Footer";
 import { Route, Switch, useLocation } from "react-router-dom";
 
@@ -27,6 +28,9 @@ function App() {
         </Route>
         <Route path="/contact">
           <Contact />
+        </Route>
+        <Route>
+          <Emploi path="/emploi" />
         </Route>
       </Switch>
       <Footer />
