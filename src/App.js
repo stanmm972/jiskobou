@@ -30,7 +30,7 @@ function App() {
           <Contact />
         </Route>
         <Route>
-          <Emploi path="/emploi" />
+          <Emploi path="/service_emploi" />
         </Route>
       </Switch>
       <Footer />
