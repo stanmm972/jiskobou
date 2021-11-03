@@ -18,8 +18,8 @@ const Navbar = () => {
         <Link to="/a_propos" href="#">
           <li>À propos de nous</li>
         </Link>
-        <Link to="/services_emplois" href="#">
-          <li>Services-Emploi</li>
+        <Link to="/service_emploi" href="#">
+          <li>Services et Emploi</li>
         </Link>
         <Link to="/contact" href="#">
           <li>Contactez-nous</li>

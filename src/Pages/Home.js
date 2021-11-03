@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Infirmier from "../Img/infirmier.jpg";
 import Infirmiere from "../Img/infirmiere.jpg";
+import Equipe from "../Img/equipe.jpg";
 import Soin from "../Img/soin.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
@@ -10,7 +11,6 @@ import {
   faUserTie,
   faUserShield,
   faFistRaised,
-  faCheck,
 } from "@fortawesome/free-solid-svg-icons";
 
 const Home = () => {
@@ -90,7 +90,7 @@ const Home = () => {
       </GlobalVignette>
       <SoinBloc>
         <SoinDiv>
-          <div className="soin_txt">
+          <div className="soin_txt" id="a_propos">
             <h3>
               Les établissements québécois de la santé travaillent fort, et la
               demande est toujours grandissante. Bien que vous preniez le temps
@@ -123,65 +123,9 @@ const Home = () => {
           </div>
         </SoinDiv>
       </SoinBloc>
-      <ServiceContainer>
-        <ServiceTitle>
-          <h3>Services offerts et ressources disponibles</h3>
-        </ServiceTitle>
-        <ServiceDesc>
-          <div>
-            <h4 className="description-txt">
-              Notre équipe est composée de ressources triées sur le volet afin
-              de satisfaire aux plus hauts standards de l'industrie. <br />
-              Parmi les ressources disponibles avec notre agence afin de
-              supporter adéquatement vos équipes déjà en place.
-            </h4>
-          </div>
-          <div className="service-job">
-            <ul>
-              <li>
-                <FontAwesomeIcon
-                  icon={faCheck}
-                  alt="check"
-                  className="check_icon"
-                />
-                Infirmiers, infirmières
-              </li>
-              <li>
-                <FontAwesomeIcon
-                  icon={faCheck}
-                  alt="check"
-                  className="check_icon"
-                />
-                Infirmiers et infirmières auxiliaires
-              </li>
-              <li>
-                <FontAwesomeIcon
-                  icon={faCheck}
-                  alt="check"
-                  className="check_icon"
-                />
-                Inhalothérapeutes
-              </li>
-              <li>
-                <FontAwesomeIcon
-                  icon={faCheck}
-                  alt="check"
-                  className="check_icon"
-                />
-                Préposés aux bénéficiaires
-              </li>
-              <li>
-                <FontAwesomeIcon
-                  icon={faCheck}
-                  alt="check"
-                  className="check_icon"
-                />
-                Secrétaires médicales
-              </li>
-            </ul>
-          </div>
-        </ServiceDesc>
-      </ServiceContainer>
+      <EquipeBloc>
+        <img src={Equipe} alt="equipe" className="equipe" />
+      </EquipeBloc>
       <Joindre>
         <JoindreCadre>
           <h2>Rejoignez l'équipe de Jiskobou!</h2>
@@ -352,10 +296,10 @@ const Vignette = styled.div`
 `;
 
 const SoinBloc = styled.section`
-  margin: 14rem 0rem;
+  margin-top: 14rem;
   background: #9e2b31;
   @media (max-width: 623px) {
-    margin: 4rem 0rem;
+    margin-top: 4rem;
   }
 `;
 const SoinDiv = styled.div`
@@ -397,9 +341,18 @@ const SoinDiv = styled.div`
   }
 `;
 
-const Joindre = styled.section`
-  margin-top: 2rem;
+const EquipeBloc = styled.div`
+  .equipe {
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+    display: block;
+  }
+  @media (max-width: 623px) {
+  }
 `;
+
+const Joindre = styled.section``;
 
 const JoindreCadre = styled.div`
   display: grid;
@@ -434,60 +387,6 @@ const JoindreCadre = styled.div`
     h4 {
       font-size: 0.8rem;
       padding: 1rem;
-    }
-  }
-`;
-
-const ServiceContainer = styled.div`
-  display: block;
-  height: 70vh;
-`;
-
-const ServiceTitle = styled.div`
-  margin: 10rem;
-  h3 {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 500;
-  }
-  @media (max-width: 623px) {
-    margin: 1rem;
-    h3 {
-      font-size: 1.5rem;
-      margin-bottom: 5rem;
-    }
-  }
-`;
-
-const ServiceDesc = styled.div`
-  display: flex;
-  align-items: center;
-  margin: 10rem;
-  .description-txt {
-    margin-right: 10rem;
-    font-size: 1.2rem;
-    font-weight: 400;
-  }
-  .service-job {
-    li {
-      list-style: none;
-      margin-bottom: 1rem;
-      .check_icon {
-        color: green;
-        margin-right: 1rem;
-      }
-    }
-  }
-  @media (max-width: 623px) {
-    margin: 1rem;
-    .description-txt {
-      margin-right: 3rem;
-      font-size: 0%.8rem;
-    }
-    .service-job {
-      ul {
-        font-size: 0.8rem;
-      }
     }
   }
 `;
