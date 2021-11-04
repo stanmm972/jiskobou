@@ -42,7 +42,10 @@ const Home = () => {
           <motion.h4 variants={titleAnim}>Le paradigme des soins.</motion.h4>
         </BannerText>
         <BannerButton>
-          <Link to="/emploi" style={{ textDecoration: "none", color: "#fff" }}>
+          <Link
+            to="/service_emploi"
+            style={{ textDecoration: "none", color: "#fff" }}
+          >
             <h3>Appliquez maintenant</h3>
           </Link>
         </BannerButton>

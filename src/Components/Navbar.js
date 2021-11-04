@@ -76,6 +76,9 @@ const StyledNav = styled.nav`
   }
 
   @media (max-width: 768px) {
+    #logo {
+      height: 7vh;
+    }
     ul {
       padding: 0rem 0rem 1rem;
       li {
