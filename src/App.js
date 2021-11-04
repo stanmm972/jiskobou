@@ -1,5 +1,6 @@
 import React from "react";
 import GlobalStyle from "./Components/GlobalStyle";
+import { AnimatePresence } from "framer-motion";
 import Navbar from "./Components/Navbar";
 import Home from "./Pages/Home";
 import Contact from "./Pages/Contact";
@@ -15,20 +16,22 @@ function App() {
     <div className="App">
       <GlobalStyle />
       <Navbar />
-      <Switch location={location} key={location.pathname}>
-        <Route path="/" exact>
-          <Home />
-        </Route>
-        <Route path="/contact">
-          <Contact />
-        </Route>
-        <Route path="/service_emploi">
-          <Emploi />
-        </Route>
-        <Route path="/newsletter">
-          <Newsletter />
-        </Route>
-      </Switch>
+      <AnimatePresence>
+        <Switch location={location} key={location.pathname}>
+          <Route path="/" exact>
+            <Home />
+          </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
+          <Route path="/service_emploi">
+            <Emploi />
+          </Route>
+          <Route path="/newsletter">
+            <Newsletter />
+          </Route>
+        </Switch>
+      </AnimatePresence>
       <Footer />
     </div>
   );

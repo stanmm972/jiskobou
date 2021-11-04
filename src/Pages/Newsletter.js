@@ -1,11 +1,18 @@
 import React from "react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
+import { pageAnimation } from "./animation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 const Newsletter = () => {
   return (
-    <StyleNews>
+    <StyleNews
+      exit="exit"
+      variants={pageAnimation}
+      initial="hidden"
+      animate="show"
+    >
       <h1>Newsletter</h1>
       <FontAwesomeIcon
         icon={faSpinner}
@@ -21,7 +28,7 @@ const Newsletter = () => {
   );
 };
 
-const StyleNews = styled.div`
+const StyleNews = styled(motion.div)`
   display: block;
   text-align: center;
   height: 50vh;

@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { motion } from "framer-motion";
+import { pageAnimation } from "./animation";
+import { titleAnim, photoAnim, slideBloc, slideIcon } from "./animation";
 import Infirmier from "../Img/infirmier.jpg";
 import Infirmiere from "../Img/infirmiere.jpg";
 import Equipe from "../Img/equipe.jpg";
@@ -16,14 +19,19 @@ import {
 
 const Home = () => {
   return (
-    <>
+    <motion.div
+      exit="exit"
+      variants={pageAnimation}
+      initial="hidden"
+      animate="show"
+    >
       <HomeContainer className="home_container">
         <div>
           <img src={Infirmier} alt="infirmier" className="infirmier" />
         </div>
         <BannerText>
-          <h2>Bienvenue à Jiskobou</h2>
-          <h4>Le paradigme des soins.</h4>
+          <motion.h2 variants={titleAnim}>Bienvenue à Jiskobou</motion.h2>
+          <motion.h4 variants={titleAnim}>Le paradigme des soins.</motion.h4>
         </BannerText>
         <BannerButton>
           <Link to="/emploi" style={{ textDecoration: "none", color: "#fff" }}>
@@ -39,21 +47,21 @@ const Home = () => {
       </HomeTitle>
       <HomeIntro>
         <div className="infirmiere">
-          <img src={Infirmiere} alt="infirmiere" />
+          <motion.img variants={photoAnim} src={Infirmiere} alt="infirmiere" />
         </div>
         <div className="intro_text">
-          <h3>
+          <motion.h3 variants={slideBloc}>
             <FontAwesomeIcon icon={faQuoteLeft} alt="quote" className="quote" />
             Nous sommes une équipe motivée qui à pour mission d’offrir un
             service hors-pair aux hôpitaux, CHSLD, entreprises et particuliers
             sur tout l’île de Montréal et ses environs, en vous déléguant un de
             nos associés dûment qualifiés et expérimentés.
-          </h3>
+          </motion.h3>
         </div>
       </HomeIntro>
       <GlobalVignette>
         <Vignette>
-          <div className="vignette">
+          <motion.div variants={slideIcon} className="vignette">
             <FontAwesomeIcon
               icon={faHandSparkles}
               size="6x"
@@ -61,8 +69,8 @@ const Home = () => {
               className="vig"
             />
             <h3>Travail de qualité</h3>
-          </div>
-          <div className="vignette">
+          </motion.div>
+          <motion.div variants={slideIcon} className="vignette">
             <FontAwesomeIcon
               icon={faUserTie}
               size="6x"
@@ -70,8 +78,8 @@ const Home = () => {
               className="vig"
             />
             <h3>Professionnalisme</h3>
-          </div>
-          <div className="vignette">
+          </motion.div>
+          <motion.div variants={slideIcon} className="vignette">
             <FontAwesomeIcon
               icon={faUserShield}
               size="6x"
@@ -79,8 +87,8 @@ const Home = () => {
               className="vig"
             />
             <h3>Personnel de qualité</h3>
-          </div>
-          <div className="vignette">
+          </motion.div>
+          <motion.div variants={slideIcon} className="vignette">
             <FontAwesomeIcon
               icon={faFistRaised}
               size="6x"
@@ -88,7 +96,7 @@ const Home = () => {
               className="vig"
             />
             <h3>Engagement</h3>
-          </div>
+          </motion.div>
         </Vignette>
       </GlobalVignette>
       <SoinBloc>
@@ -144,7 +152,7 @@ const Home = () => {
           </Link>
         </JoindreCadre>
       </Joindre>
-    </>
+    </motion.div>
   );
 };
 
