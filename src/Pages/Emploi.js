@@ -1,5 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
+import { pageAnimation } from "./animation";
+import { titleAnim, slideText } from "./animation";
 import emploi from "../Img/emploi.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -10,13 +13,18 @@ import {
 
 const Emploi = () => {
   return (
-    <>
+    <motion.div
+      exit="exit"
+      variants={pageAnimation}
+      initial="hidden"
+      animate="show"
+    >
       <EmploiBanner>
         <div>
           <img src={emploi} alt="emploi" className="emploi" />
         </div>
         <div className="emploi-txt">
-          <h2>Nos emplois</h2>
+          <motion.h2 variants={titleAnim}>Nos emplois</motion.h2>
         </div>
       </EmploiBanner>
 
@@ -35,46 +43,46 @@ const Emploi = () => {
           </div>
           <div className="service-job">
             <ul>
-              <li>
+              <motion.li variants={slideText}>
                 <FontAwesomeIcon
                   icon={faCheck}
                   alt="check"
                   className="check_icon"
                 />
                 Infirmiers, infirmières
-              </li>
-              <li>
+              </motion.li>
+              <motion.li variants={slideText}>
                 <FontAwesomeIcon
                   icon={faCheck}
                   alt="check"
                   className="check_icon"
                 />
                 Infirmiers et infirmières auxiliaires
-              </li>
-              <li>
+              </motion.li>
+              <motion.li variants={slideText}>
                 <FontAwesomeIcon
                   icon={faCheck}
                   alt="check"
                   className="check_icon"
                 />
                 Inhalothérapeutes
-              </li>
-              <li>
+              </motion.li>
+              <motion.li variants={slideText}>
                 <FontAwesomeIcon
                   icon={faCheck}
                   alt="check"
                   className="check_icon"
                 />
                 Préposés aux bénéficiaires
-              </li>
-              <li>
+              </motion.li>
+              <motion.li variants={slideText}>
                 <FontAwesomeIcon
                   icon={faCheck}
                   alt="check"
                   className="check_icon"
                 />
                 Secrétaires médicales
-              </li>
+              </motion.li>
             </ul>
           </div>
         </ServiceDesc>
@@ -114,7 +122,7 @@ const Emploi = () => {
           </h4>
         </div>
       </EmploiDesc>
-    </>
+    </motion.div>
   );
 };
 

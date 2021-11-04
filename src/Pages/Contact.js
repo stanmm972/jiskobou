@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
+import { pageAnimation } from "./animation";
+import { titleAnim } from "./animation";
 import emailjs from "emailjs-com";
 import contact from "../Img/contact.jpg";
 
@@ -28,14 +31,21 @@ const Contact = () => {
   }
 
   return (
-    <>
+    <motion.div
+      exit="exit"
+      variants={pageAnimation}
+      initial="hidden"
+      animate="show"
+    >
       <ContactBanner>
         <div>
           <img src={contact} alt="contact" className="contact" />
         </div>
         <div className="contact-txt">
-          <h3>Vous avez des questions?</h3>
-          <h2>Nous sommmes là pour vous aider.</h2>
+          <motion.h3 variants={titleAnim}>Vous avez des questions?</motion.h3>
+          <motion.h2 variants={titleAnim}>
+            Nous sommmes là pour vous aider.
+          </motion.h2>
         </div>
       </ContactBanner>
       <ContactTitle>
@@ -107,7 +117,7 @@ const Contact = () => {
           </div>
         </form>
       </StyledForm>
-    </>
+    </motion.div>
   );
 };
 
