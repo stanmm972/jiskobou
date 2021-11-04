@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Infirmier from "../Img/infirmier.jpg";
 import Infirmiere from "../Img/infirmiere.jpg";
@@ -25,7 +26,9 @@ const Home = () => {
           <h4>Le paradigme des soins.</h4>
         </BannerText>
         <BannerButton>
-          <h3>Appliquez maintenant</h3>
+          <Link to="/emploi" style={{ textDecoration: "none", color: "#fff" }}>
+            <h3>Appliquez maintenant</h3>
+          </Link>
         </BannerButton>
       </HomeContainer>
       <HomeTitle>
@@ -136,7 +139,9 @@ const Home = () => {
             cette équipe pourrait devenir la vôtre aussi! <br />
             Venez faire partie de notre équipe profesionnelle et dynamique !
           </h3>
-          <h4>Contactez-nous</h4>
+          <Link to="/contact" style={{ textDecoration: "none" }}>
+            <h4>Contactez-nous</h4>
+          </Link>
         </JoindreCadre>
       </Joindre>
     </>
@@ -204,7 +209,8 @@ const HomeTitle = styled.div`
   h2 {
     margin: 10rem 0rem;
     font-weight: 400;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    color: #8d99ae;
   }
   @media (max-width: 623px) {
     h2 {
@@ -316,6 +322,7 @@ const SoinDiv = styled.div`
     h3 {
       font-weight: 400;
       font-size: 1.5rem;
+      color: #e1c283;
     }
   }
   @media (max-width: 623px) {
@@ -364,6 +371,10 @@ const JoindreCadre = styled.div`
   height: 40vh;
   background: #9e2b31;
   color: #e1c283;
+
+  h2 {
+    font-size: 2.5rem;
+  }
   h3 {
     font-weight: 400;
   }
