@@ -10,6 +10,7 @@ import {
   faEnvelope,
   faCheck,
 } from "@fortawesome/free-solid-svg-icons";
+import { Helmet } from "react-helmet";
 
 const Emploi = () => {
   return (
@@ -19,6 +20,10 @@ const Emploi = () => {
       initial="hidden"
       animate="show"
     >
+      <Helmet>
+        <title>Nos emplois et services</title>
+        <meta name="description" content="Débutez une carrière chez Jiskobou" />
+      </Helmet>
       <EmploiBanner>
         <div>
           <img src={emploi} alt="emploi" className="emploi" />

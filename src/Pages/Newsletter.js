@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { pageAnimation } from "./animation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
+import { Helmet } from "react-helmet";
 
 const Newsletter = () => {
   return (
@@ -13,6 +14,10 @@ const Newsletter = () => {
       initial="hidden"
       animate="show"
     >
+      <Helmet>
+        <title>Newsletter</title>
+        <meta name="description" content="Avoir les dernières actualités" />
+      </Helmet>
       <h1>Newsletter</h1>
       <FontAwesomeIcon
         icon={faSpinner}
