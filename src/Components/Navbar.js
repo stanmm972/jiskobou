@@ -13,9 +13,6 @@ const Navbar = () => {
       </div>
       <ul>
         <Link to="/" href="#">
-          <li>Accueil</li>
-        </Link>
-        <Link to="/a_propos" href="#">
           <li>À propos de nous</li>
         </Link>
         <Link to="/service_emploi" href="#">

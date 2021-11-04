@@ -90,16 +90,28 @@ const Emploi = () => {
             rejoindre par courriel ou par téléphone.
           </h3>
         </div>
-        <div>
+        <div className="apply">
           <h3>Postulez dès maintenant</h3>
         </div>
-        <div>
-          <FontAwesomeIcon icon={faPhoneAlt} alt="phone" />
-          (514)465-9002
+        <div className="apply_info">
+          <h4>
+            <FontAwesomeIcon
+              icon={faPhoneAlt}
+              alt="phone"
+              className="apply_icon"
+            />
+            <a href="tel:+1-514-465-9002">514-465-9002</a>
+          </h4>
         </div>
-        <div>
-          <FontAwesomeIcon icon={faEnvelope} alt="email" />
-          jiskobou.inc@gmail.com
+        <div className="apply_info">
+          <h4>
+            <FontAwesomeIcon
+              icon={faEnvelope}
+              alt="email"
+              className="apply_icon"
+            />
+            <a href="mailto:jiskobou.inc@gmail.com">jiskobou.inc@gmail.com</a>
+          </h4>
         </div>
       </EmploiDesc>
     </>
@@ -145,6 +157,7 @@ const ServiceTitle = styled.div`
     text-align: center;
     font-size: 2rem;
     font-weight: 500;
+    color: #e1c283;
   }
   @media (max-width: 623px) {
     margin: 1rem;
@@ -163,11 +176,17 @@ const ServiceDesc = styled.div`
     margin-right: 10rem;
     font-size: 1.2rem;
     font-weight: 400;
+    color: #9e2b31;
   }
   .service-job {
     li {
       list-style: none;
       margin-bottom: 1rem;
+      color: #9e2b31;
+      &:hover {
+        transform: scale(1.5);
+        transition: all 0.5s ease;
+      }
       .check_icon {
         color: green;
         margin-right: 1rem;
@@ -191,9 +210,12 @@ const ServiceDesc = styled.div`
 const EmploiDesc = styled.section`
   text-align: center;
   height: 50vh;
+  background: #9e2b31;
+  padding: 3rem;
   .emploi-title {
-    margin: 5rem;
+    margin-bottom: 5rem;
     h2 {
+      color: #e1c283;
       font-size: 4rem;
       font-weight: 400;
     }
@@ -201,8 +223,32 @@ const EmploiDesc = styled.section`
   .emploi-desc {
     margin: 3rem;
     h3 {
+      color: #e1c283;
       font-size: 1.8rem;
       font-weight: 400;
+    }
+  }
+  .apply {
+    h3 {
+      color: #e1c283;
+    }
+  }
+  .apply_info {
+    h4 {
+      color: whitesmoke;
+    }
+    a {
+      text-decoration: none;
+      color: whitesmoke;
+    }
+  }
+  .apply_icon {
+    margin-right: 0.5rem;
+    color: whitesmoke;
+    &:hover {
+      color: #e1c283;
+      cursor: pointer;
+      transition: all 0.5s ease;
     }
   }
   @media (max-width: 623px) {

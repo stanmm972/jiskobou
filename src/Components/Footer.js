@@ -3,9 +3,14 @@ import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faPhoneAlt, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 import Logo from "../Img/logo_new.png";
 
 const Footer = () => {
+  const getCurrentYear = () => {
+    return new Date().getFullYear();
+  };
+
   return (
     <FooterContainer>
       <Pics>
@@ -18,13 +23,21 @@ const Footer = () => {
       <FooterInfo>
         <Item>
           <h2>Notre compagnie</h2>
-          <h3>À propos de nous</h3>
-          <h3>Newsletter</h3>
+          <Link to="/">
+            <h3>À propos de nous</h3>
+          </Link>
+          <Link to="/newsletter">
+            <h3>Newsletter</h3>
+          </Link>
         </Item>
         <Item>
           <h2>Nos services et emplois</h2>
-          <h3>Offre d'emploi</h3>
-          <h3>Recherche de professionnels</h3>
+          <Link to="/service_emploi">
+            <h3>Offre d'emploi</h3>
+          </Link>
+          <Link to="/service_emploi">
+            <h3>Recherche de professionnels</h3>
+          </Link>
         </Item>
         <Item>
           <h2>Contactez-nous</h2>
@@ -34,7 +47,7 @@ const Footer = () => {
               className="icon_extra"
               alt="call"
             />
-            (514)465-9002
+            <a href="tel:+1-514-465-9002">(514)465-9002</a>
           </h3>
           <h3>
             <FontAwesomeIcon
@@ -42,7 +55,7 @@ const Footer = () => {
               className="icon_extra"
               alt="email"
             />
-            jiskobou.inc@gmail.com
+            <a href="mailto:jiskobou.inc@gmail.com">jiskobou.inc@gmail.com</a>
           </h3>
         </Item>
       </FooterInfo>
@@ -61,7 +74,7 @@ const Footer = () => {
             alt="Twitter"
           />
         </MediaIcon>
-        <h4>Copyright@2020 | Developed by FredMM</h4>
+        <h4>Copyright@{getCurrentYear()} | Developed by FredMM</h4>
       </div>
     </FooterContainer>
   );
@@ -136,11 +149,20 @@ const Item = styled.div`
   .icon_extra {
     margin-right: 1rem;
   }
+  a {
+    text-decoration: none;
+    color: #e1c283;
+  }
   @media (max-width: 623px) {
     margin-left: 1rem;
     h2 {
       margin-bottom: 1rem;
       font-size: 8px;
+    }
+  }
+  @media (max-width: 800px) {
+    h3 {
+      font-size: 0.8rem;
     }
   }
 `;
