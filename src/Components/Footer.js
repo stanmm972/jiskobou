@@ -47,7 +47,7 @@ const Footer = () => {
               className="icon_extra"
               alt="call"
             />
-            <a href="tel:+1-514-465-9002">(514)465-9002</a>
+            <a href="tel:+1-438-337-3037">(438)337-3037</a>
           </h3>
           <h3>
             <FontAwesomeIcon
@@ -86,7 +86,7 @@ const FooterContainer = styled.div`
   align-items: center;
   justify-content: space-around;
   color: #e1c283;
-  background: #8d99ae;
+  background: #9e2b31;
   .icon {
     &:hover {
       cursor: pointer;
@@ -135,10 +135,10 @@ const Item = styled.div`
   margin-left: 3rem;
   h2 {
     margin-bottom: 1.5rem;
-    font-weight: 300;
+    font-weight: 500;
   }
   h3 {
-    font-weight: lighter;
+    font-weight: 400;
     cursor: pointer;
     margin-bottom: 1rem;
     &:hover {
