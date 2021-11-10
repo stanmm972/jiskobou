@@ -98,7 +98,7 @@ const FooterContainer = styled.div`
     margin: 2rem;
   }
 
-  @media (max-width: 623px) {
+  @media (max-width: 480px) {
     font-size: 0.5rem;
   }
 `;
@@ -120,13 +120,41 @@ const Pics = styled.div`
   h3 {
     margin-bottom: 3rem;
   }
-  @media (max-width: 623px) {
+  @media (max-width: 480px) {
     img {
       width: 100px;
       height: 10vh;
     }
     h3 {
       margin-bottom: 1rem;
+    }
+  }
+  @media (min-width: 481px) {
+    img {
+      height: 20vh;
+    }
+  }
+  @media (min-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+      width: 200px;
+      height: 20vh;
+      object-fit: cover;
+    }
+    h3 {
+      margin-bottom: 3rem;
+    }
+  }
+  @media only screen and (orientation: landscape) {
+    img {
+      height: 40vh;
+    }
+  }
+  @media only screen and (min-device-width: 1024px) and (max-device-width: 1524px) and (orientation: landscape) {
+    img {
+      height: 25vh;
     }
   }
 `;
@@ -153,14 +181,15 @@ const Item = styled.div`
     text-decoration: none;
     color: #e1c283;
   }
-  @media (max-width: 623px) {
+  @media (max-width: 480px) {
     margin-left: 1rem;
     h2 {
       margin-bottom: 1rem;
       font-size: 8px;
     }
   }
-  @media (max-width: 800px) {
+  @media (min-width: 481px) {
+    margin-left: 1rem;
     h3 {
       font-size: 0.8rem;
     }

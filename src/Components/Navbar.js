@@ -58,32 +58,22 @@ const StyledNav = styled.nav`
     }
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 480px) {
     min-height: 5vh;
-    flex-direction: column;
-    #logo {
-      width: 100%;
-      height: 10vh;
-    }
-    ul {
-      padding: 2rem;
-      justify-content: space-around;
-      width: 100%;
-      li {
-        padding: 0;
-      }
+    display: grid;
+    justify-items: center;
+    li {
+      padding: 1vh;
     }
   }
-
-  @media (max-width: 768px) {
+  @media only screen and (orientation: landscape) {
+    min-height: 20vh;
+    justify-items: center;
     #logo {
-      height: 7vh;
+      width: 28vh;
     }
-    ul {
-      padding: 0rem 0rem 1rem;
-      li {
-        font-size: 12px;
-      }
+    li {
+      padding: 0rem 2rem;
     }
   }
 `;
