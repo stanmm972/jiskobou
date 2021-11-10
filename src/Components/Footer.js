@@ -152,9 +152,9 @@ const Pics = styled.div`
       height: 40vh;
     }
   }
-  @media only screen and (min-device-width: 1024px) and (max-device-width: 1524px) and (orientation: landscape) {
+  @media only screen and (min-device-width: 1024px) and (max-device-width: 2524px) and (orientation: landscape) {
     img {
-      height: 25vh;
+      height: 100%;
     }
   }
 `;

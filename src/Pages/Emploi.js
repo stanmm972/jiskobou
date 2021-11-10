@@ -147,7 +147,7 @@ const EmploiBanner = styled.div`
       font-size: 4rem;
     }
   }
-  @media (max-width: 623px) {
+  @media (max-width: 480px) {
     .emploi {
       height: 30vh;
     }
@@ -157,11 +157,25 @@ const EmploiBanner = styled.div`
       }
     }
   }
+  @media (min-width: 481px) {
+    .emploi {
+      height: 50vh;
+    }
+  }
 `;
 
 const ServiceContainer = styled.div`
   display: block;
   height: 70vh;
+  @media (max-width: 380px) {
+    height: 110vh;
+  }
+  @media (min-width: 481px) {
+    height: 50vh;
+  }
+  @media only screen and (min-device-width: 600px) and (max-device-width: 830px) and (orientation: landscape) {
+    height: 120vh;
+  }
 `;
 
 const ServiceTitle = styled.div`
@@ -172,12 +186,15 @@ const ServiceTitle = styled.div`
     font-weight: 500;
     color: #e1c283;
   }
-  @media (max-width: 623px) {
+  @media (max-width: 480px) {
     margin: 1rem;
     h3 {
       font-size: 1.5rem;
       margin-bottom: 5rem;
     }
+  }
+  @media (min-width: 481px) {
+    margin: 5rem;
   }
 `;
 
@@ -206,7 +223,7 @@ const ServiceDesc = styled.div`
       }
     }
   }
-  @media (max-width: 623px) {
+  @media (max-width: 480px) {
     margin: 1rem;
     .description-txt {
       margin-right: 3rem;
@@ -217,6 +234,9 @@ const ServiceDesc = styled.div`
         font-size: 0.8rem;
       }
     }
+  }
+  @media (min-width: 481px) {
+    margin: 5rem;
   }
 `;
 
@@ -264,7 +284,10 @@ const EmploiDesc = styled.section`
       transition: all 0.5s ease;
     }
   }
-  @media (max-width: 623px) {
+  @media (max-width: 380px) {
+    height: 80vh;
+  }
+  @media (max-width: 480px) {
     .emploi-title {
       margin: 2rem;
       h2 {
@@ -277,6 +300,12 @@ const EmploiDesc = styled.section`
         font-size: 1rem;
       }
     }
+  }
+  @media only screen and (min-device-width: 600px) and (max-device-width: 830px) and (orientation: landscape) {
+    height: 135vh;
+  }
+  @media only screen and (min-device-width: 831px) and (max-device-width: 1024px) and (orientation: landscape) {
+    height: 80vh;
   }
 `;
 
