@@ -149,9 +149,22 @@ const ContactBanner = styled.div`
       font-weight: 400;
     }
   }
-  @media (max-width: 623px) {
-    .conatct {
+  @media (max-width: 480px) {
+    .contact {
       height: 30vh;
+    }
+    .contact-txt {
+      h2 {
+        font-size: 2rem;
+      }
+      h3 {
+        font-size: 1rem;
+      }
+    }
+  }
+  @media only screen and (orientation: landscape) {
+    .contact {
+      height: 50vh;
     }
     .contact-txt {
       h2 {
