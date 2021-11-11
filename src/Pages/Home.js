@@ -6,7 +6,6 @@ import Soin from "../Components/Soin";
 import Joindre from "../Components/Joindre";
 import { motion } from "framer-motion";
 import { pageAnimation } from "./animation";
-import { Helmet } from "react-helmet";
 
 const Home = () => {
   return (
@@ -16,13 +15,6 @@ const Home = () => {
       initial="hidden"
       animate="show"
     >
-      <Helmet>
-        <title>Jiskobou.com</title>
-        <meta
-          name="description"
-          content="Travail de qualité et personnel engagé"
-        />
-      </Helmet>
       <Banner />
       <Intro />
       <Vignette />

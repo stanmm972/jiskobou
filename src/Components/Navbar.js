@@ -34,16 +34,13 @@ const Navbar = () => {
         </ul>
       </NavMenu>
 
-      <button
-        className="mobile_menu_icon"
-        onClick={() => setMenuOpen(!menuOpen)}
-      >
+      <div className="mobile_menu_icon" onClick={() => setMenuOpen(!menuOpen)}>
         {menuOpen ? (
           <FontAwesomeIcon icon={faTimes} alt="close" className="close" />
         ) : (
           <FontAwesomeIcon icon={faBars} alt="menu" className="menu" />
         )}
-      </button>
+      </div>
     </StyledNav>
   );
 };

@@ -8,7 +8,6 @@ import Emploi from "./Pages/Emploi";
 import Newsletter from "./Pages/Newsletter";
 import Footer from "./Components/Footer";
 import { Route, Switch, useLocation } from "react-router-dom";
-import { Helmet } from "react-helmet";
 
 function App() {
   const location = useLocation();
@@ -17,17 +16,17 @@ function App() {
     <div className="App">
       <GlobalStyle />
       <Navbar />
-      <Helmet>
-        <title>Jiskobou.com</title>
-        <meta
-          name="description"
-          content="Jiskobou est le bon choix pour le placement de personnel infirmier et en soins de santé"
-        />
-        <meta
-          name="keywords"
-          content="Jiskobou, Placement, infirmier,infirmière, soins de santé"
-        />
-      </Helmet>
+
+      <title>Jiskobou.com</title>
+      <meta
+        name="description"
+        content="Jiskobou est le bon choix pour le placement de personnel infirmier et en soins de santé"
+      />
+      <meta
+        name="keywords"
+        content="Jiskobou, Placement, infirmier,infirmière, soins de santé"
+      />
+
       <AnimatePresence>
         <Switch location={location} key={location.pathname}>
           <Route path="/" exact>
