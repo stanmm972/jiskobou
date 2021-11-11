@@ -254,7 +254,7 @@ const ServiceDesc = styled.div`
 
 const EmploiDesc = styled.section`
   text-align: center;
-  height: 50vh;
+  height: 70vh;
   background: #9e2b31;
   padding: 3rem;
   span {
@@ -304,7 +304,7 @@ const EmploiDesc = styled.section`
     }
   }
   @media (max-width: 380px) {
-    height: 80vh;
+    height: 85vh;
   }
   @media (max-width: 480px) {
     .emploi-title {
@@ -321,10 +321,10 @@ const EmploiDesc = styled.section`
     }
   }
   @media only screen and (min-device-width: 600px) and (max-device-width: 830px) and (orientation: landscape) {
-    height: 135vh;
+    height: 190vh;
   }
   @media only screen and (min-device-width: 831px) and (max-device-width: 1024px) and (orientation: landscape) {
-    height: 80vh;
+    height: 118vh;
   }
 `;
 
