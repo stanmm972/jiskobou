@@ -1,16 +1,17 @@
 import React from "react";
 import styled from "styled-components";
+import Pdf from "../Documents/formulaire_d_emploi.pdf";
 import { motion } from "framer-motion";
 import { pageAnimation } from "./animation";
 import { titleAnim, slideText } from "./animation";
 import emploi from "../Img/emploi.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faWpforms } from "@fortawesome/free-brands-svg-icons";
 import {
   faPhoneAlt,
   faEnvelope,
   faCheck,
 } from "@fortawesome/free-solid-svg-icons";
-import { Helmet } from "react-helmet";
 
 const Emploi = () => {
   return (
@@ -20,10 +21,6 @@ const Emploi = () => {
       initial="hidden"
       animate="show"
     >
-      <Helmet>
-        <title>Nos emplois et services</title>
-        <meta name="description" content="Débutez une carrière chez Jiskobou" />
-      </Helmet>
       <EmploiBanner>
         <div>
           <img src={emploi} alt="emploi" className="emploi" />
@@ -102,6 +99,21 @@ const Emploi = () => {
             La page est présentement en travaux mais vous pouvez toujours nous
             rejoindre par courriel ou par téléphone.
           </h3>
+          <h3>
+            Vous pouvez remplir notre formulaire d'emploi et nous le renvoyez
+            par courriel à: <span>jiskobou.inc@gmail.com</span>
+          </h3>
+          <div>
+            <a href={Pdf} target="_blank" rel="noreferrer">
+              <FontAwesomeIcon
+                icon={faWpforms}
+                alt="formulaire"
+                size="4x"
+                className="formulaire"
+              />
+            </a>
+            <h5>(Cliquez sur l'icône ci-dessus)</h5>
+          </div>
         </div>
         <div className="apply">
           <h3>Postulez dès maintenant</h3>
@@ -113,7 +125,7 @@ const Emploi = () => {
               alt="phone"
               className="apply_icon"
             />
-            <a href="tel:+1-514-465-9002">514-465-9002</a>
+            <a href="tel:+1-438-337-3037">438-337-3037</a>
           </h4>
         </div>
         <div className="apply_info">
@@ -245,6 +257,13 @@ const EmploiDesc = styled.section`
   height: 50vh;
   background: #9e2b31;
   padding: 3rem;
+  span {
+    text-decoration: underline;
+  }
+  .formulaire {
+    color: #e1c283;
+    margin-top: 2rem;
+  }
   .emploi-title {
     margin-bottom: 5rem;
     h2 {

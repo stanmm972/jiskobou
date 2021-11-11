@@ -5,7 +5,6 @@ import { pageAnimation } from "./animation";
 import { titleAnim } from "./animation";
 import emailjs from "emailjs-com";
 import contact from "../Img/contact.jpg";
-import { Helmet } from "react-helmet";
 
 const USER_ID = process.env.REACT_APP_USER_ID;
 
@@ -38,13 +37,6 @@ const Contact = () => {
       initial="hidden"
       animate="show"
     >
-      <Helmet>
-        <title>Nous joindre</title>
-        <meta
-          name="description"
-          content="Besoins de service ou en savoir plus"
-        />
-      </Helmet>
       <ContactBanner>
         <div>
           <img src={contact} alt="contact" className="contact" />
