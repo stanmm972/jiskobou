@@ -100,7 +100,7 @@ const Emploi = () => {
             rejoindre par courriel ou par téléphone.
           </h3>
           <h3>
-            Vous pouvez remplir notre formulaire d'emploi et nous le renvoyez
+            Vous pouvez remplir notre formulaire d'emploi et nous le renvoyer
             par courriel à: <span>jiskobou.inc@gmail.com</span>
           </h3>
           <div>
