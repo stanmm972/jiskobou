@@ -17,7 +17,7 @@ function App() {
       <GlobalStyle />
       <Navbar />
 
-      <title>Jiskobou.com</title>
+      <title>Jiskobou.ca</title>
       <meta
         name="description"
         content="Jiskobou est le bon choix pour le placement de personnel infirmier et en soins de santé"

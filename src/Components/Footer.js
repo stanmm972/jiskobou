@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faPhoneAlt, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import Logo from "../Img/logo_new.png";
@@ -61,18 +61,22 @@ const Footer = () => {
       </FooterInfo>
       <div className="media">
         <MediaIcon>
-          <FontAwesomeIcon
-            icon={faFacebook}
-            className="icon"
-            size="2x"
-            alt="Facebook"
-          />
-          <FontAwesomeIcon
-            icon={faTwitter}
-            className="icon"
-            size="2x"
-            alt="Twitter"
-          />
+          <a href="https://www.facebook.com/jiskobou2021">
+            <FontAwesomeIcon
+              icon={faFacebook}
+              className="icon"
+              size="2x"
+              alt="Facebook"
+            />
+          </a>
+          <a href="https://www.instagram.com/jiskobou.inc/?hl=fr">
+            <FontAwesomeIcon
+              icon={faInstagram}
+              className="icon"
+              size="2x"
+              alt="Twitter"
+            />
+          </a>
         </MediaIcon>
         <h4>Copyright@{getCurrentYear()} | Developed by FredMM</h4>
       </div>
@@ -87,11 +91,14 @@ const FooterContainer = styled.div`
   justify-content: space-around;
   color: #e1c283;
   background: #9e2b31;
-  .icon {
-    &:hover {
-      cursor: pointer;
-      color: white;
-      transition: all 0.5s ease;
+  a {
+    color: #e1c283;
+    .icon {
+      &:hover {
+        cursor: pointer;
+        color: white;
+        transition: all 0.5s ease;
+      }
     }
   }
   .media {
