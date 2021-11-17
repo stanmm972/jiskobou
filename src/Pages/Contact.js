@@ -113,7 +113,9 @@ const Contact = () => {
                 placeholder="Message"
               ></textarea>
             </div>
-            <input type="submit" value="Envoyer" className="submit" />
+            <div className="submit">
+              <input type="submit" value="Envoyer" />
+            </div>
           </div>
         </form>
       </StyledForm>
@@ -208,14 +210,16 @@ const StyledForm = styled.div`
     }
   }
   .submit {
-    margin: 1rem;
-    padding: 0.8rem 1.5rem;
-    cursor: pointer;
-    border: none;
-    &:hover {
-      color: white;
-      background: #9e2b31;
-      transition: all 0.5s ease;
+    input {
+      margin: 1rem;
+      padding: 0.8rem 1.5rem;
+      cursor: pointer;
+      border: none;
+      &:hover {
+        color: white;
+        background: #9e2b31;
+        transition: all 0.5s ease;
+      }
     }
   }
 `;

@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import logo from "../Img/logo_new.png";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
@@ -17,11 +16,16 @@ const Navbar = () => {
         </Link>
       </div>
 
+      <div className="mobile_menu_icon" onClick={() => setMenuOpen(!menuOpen)}>
+        {menuOpen ? (
+          <FontAwesomeIcon icon={faTimes} alt="close" className="close" />
+        ) : (
+          <FontAwesomeIcon icon={faBars} alt="menu" className="menu" />
+        )}
+      </div>
+
       <NavMenu className="nav_menu">
-        <ul
-          className={menuOpen ? "nav-links-mobile" : "nav-links"}
-          onClick={() => setMenuOpen(false)}
-        >
+        <ul className={menuOpen ? "nav-links-mobile" : "nav-links"}>
           <Link to="/" href="#">
             <li>À propos de nous</li>
           </Link>
@@ -33,14 +37,6 @@ const Navbar = () => {
           </Link>
         </ul>
       </NavMenu>
-
-      <div className="mobile_menu_icon" onClick={() => setMenuOpen(!menuOpen)}>
-        {menuOpen ? (
-          <FontAwesomeIcon icon={faTimes} alt="close" className="close" />
-        ) : (
-          <FontAwesomeIcon icon={faBars} alt="menu" className="menu" />
-        )}
-      </div>
     </StyledNav>
   );
 };
@@ -88,8 +84,6 @@ const StyledNav = styled.nav`
     .mobile_menu_icon {
       position: absolute;
       display: block;
-      border: none;
-      outline: none;
       top: 5vh;
       right: 4vh;
       font-size: 20px;

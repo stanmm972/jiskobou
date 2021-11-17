@@ -3,14 +3,30 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { titleAnim } from "../Pages/animation";
-import Infirmier from "../Img/infirmier.jpg";
+import Video from "../video/vid.mp4";
 
 const Banner = () => {
   return (
     <HomeContainer className="home_container">
-      <div>
-        <img src={Infirmier} alt="infirmier" className="infirmier" />
-      </div>
+      <video
+        autoPlay
+        loop
+        muted
+        style={{
+          width: "100%",
+          left: "0",
+          top: "10%",
+          height: "90vh",
+          objectFit: "cover",
+        }}
+      >
+        <source
+          src={Video}
+          type="video/mp4"
+          alt="infirmier"
+          className="infirmier"
+        />
+      </video>
       <BannerText>
         <motion.h2 variants={titleAnim}>Bienvenue à Jiskobou</motion.h2>
         <motion.h4 variants={titleAnim}>Le paradigme des soins.</motion.h4>
