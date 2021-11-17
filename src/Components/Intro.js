@@ -11,8 +11,8 @@ const Intro = () => {
     <>
       <HomeTitle>
         <h2>
-          Vous ferez chez nous, le bon choix pour le placement de personnel
-          infirmier et en soins de santé
+          Vous ferez chez nous, le bon choix pour le placement de personnel en
+          soins de santé
         </h2>
       </HomeTitle>
       <HomeIntro>
