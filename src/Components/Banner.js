@@ -9,8 +9,10 @@ const Banner = () => {
   return (
     <HomeContainer className="home_container">
       <video
-        autoPlay
+        controls
+        autoPlay={"autoplay"}
         loop
+        preLoad="auto"
         muted
         style={{
           width: "100%",
