@@ -17,7 +17,7 @@ const Vignette = () => {
         <motion.div variants={slideIcon} className="vignette">
           <FontAwesomeIcon
             icon={faHandSparkles}
-            size="6x"
+            size="10x"
             alt="qualite"
             className="vig"
           />
@@ -26,7 +26,7 @@ const Vignette = () => {
         <motion.div variants={slideIcon} className="vignette">
           <FontAwesomeIcon
             icon={faUserTie}
-            size="6x"
+            size="10x"
             alt="professionnalisme"
             className="vig"
           />
@@ -35,7 +35,7 @@ const Vignette = () => {
         <motion.div variants={slideIcon} className="vignette">
           <FontAwesomeIcon
             icon={faUserShield}
-            size="6x"
+            size="10x"
             alt="personnel"
             className="vig"
           />
@@ -44,7 +44,7 @@ const Vignette = () => {
         <motion.div variants={slideIcon} className="vignette">
           <FontAwesomeIcon
             icon={faFistRaised}
-            size="6x"
+            size="10x"
             alt="engagement"
             className="vig"
           />
@@ -56,7 +56,7 @@ const Vignette = () => {
 };
 
 const GlobalVignette = styled.div`
-  margin: 15rem;
+  margin: 10rem;
   @media (max-width: 480px) {
     margin: 2rem 0rem 0rem -8rem;
   }
@@ -87,6 +87,9 @@ const Vignettes = styled.div`
     .vignette {
       margin-left: 3rem;
       margin-bottom: 5rem;
+    }
+    .vig {
+      font-size: 90px;
     }
   }
   @media (min-width: 760px) {

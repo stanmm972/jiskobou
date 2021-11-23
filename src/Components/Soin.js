@@ -49,27 +49,28 @@ const Soin = () => {
 };
 
 const SoinBloc = styled.section`
-  margin-top: 14rem;
-  background: #9e2b31;
+  display: flex;
+  margin: 10rem 0;
   @media (max-width: 623px) {
     margin-top: 4rem;
   }
 `;
 const SoinDiv = styled.div`
   display: flex;
-  padding: 2rem;
-  justify-content: space-evenly;
   .img_soin {
+    height: 57vh;
     width: 100%;
-    height: 38vh;
+    padding: 2rem;
     object-fit: cover;
   }
   .soin_txt {
-    width: 50%;
+    width: 100%;
     h3 {
-      font-weight: 400;
-      font-size: 1.5rem;
-      color: #e1c283;
+      font-size: 1.2rem;
+      color: whitesmoke;
+      border-radius: 5px;
+      background: #bcb8b1;
+      object-fit: cover;
     }
   }
   @media (max-width: 480px) {
@@ -92,19 +93,23 @@ const SoinDiv = styled.div`
     }
     h3 {
       font-size: 1rem;
+      padding: 1rem;
     }
   }
   @media (min-width: 760px) {
-    display: block;
+    display: flex;
     .img_soin {
-      height: 100vh;
+      object-fit: cover;
+      height: 57vh;
+      width: 100%;
     }
     .soin_txt {
       width: 100%;
       margin-bottom: 1rem;
     }
     h3 {
-      padding: 1rem;
+      padding: 2rem;
+      margin: 2rem;
     }
   }
   @media only screen and (min-device-width: 880px) and (max-device-width: 1024px) and (orientation: landscape) {

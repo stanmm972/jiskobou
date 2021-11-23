@@ -61,7 +61,7 @@ const HomeIntro = styled.section`
   justify-content: center;
   align-items: center;
   img {
-    height: 50vh;
+    height: 60vh;
     object-fit: cover;
   }
   .intro_text {
@@ -80,8 +80,8 @@ const HomeIntro = styled.section`
     display: grid;
 
     img {
-      width: 345px;
-      height: 35vh;
+      width: 320px;
+      height: 40vh;
     }
     .intro_text {
       h3 {
@@ -120,7 +120,7 @@ const HomeIntro = styled.section`
     display: flex;
     img {
       width: 768px;
-      height: 45vh;
+      height: 60vh;
     }
     .intro_text {
       h3 {
