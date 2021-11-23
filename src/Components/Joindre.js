@@ -29,7 +29,7 @@ const JoindreCadre = styled.div`
   text-align: center;
   justify-items: center;
   width: 100%;
-  height: 40vh;
+  height: 62vh;
   color: #8d99ae;
   margin-top: 2rem;
 
